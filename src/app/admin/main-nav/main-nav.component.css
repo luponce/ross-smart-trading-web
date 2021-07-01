@@ -21,3 +21,7 @@
   bottom: 3%;
   right: 3%;
 }
+
+.mat-expansion-panel {
+  box-shadow: none !important;
+}

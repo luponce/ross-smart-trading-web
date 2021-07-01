@@ -7,11 +7,13 @@ import { AdminRoutingModule } from './admin-routing.module';
 import { LoginComponent } from './login/login.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { MaterialModule } from '../modules/material/material.module';
+import { BotonRedesSocialesComponent } from './components/boton-redes-sociales/boton-redes-sociales.component';
 
 @NgModule({
   declarations: [
     MainNavComponent,
-    LoginComponent
+    LoginComponent,
+    BotonRedesSocialesComponent
   ],
   imports: [
     CommonModule,

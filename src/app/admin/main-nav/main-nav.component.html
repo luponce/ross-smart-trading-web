@@ -5,13 +5,19 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
-      <a mat-list-item href="#">Link 3</a>
+      <!-- MENU ADMIN -->
+      <div>
+        <a mat-list-item>Alertas</a>
+        <a mat-list-item>Carteras</a>
+        <a mat-list-item>Notificaciones</a>
+        <a mat-list-item>Planes</a>
+        <a mat-list-item>Servicios</a>
+        <a mat-list-item>Usuarios</a>
+      </div>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
+    <mat-toolbar>
       <button
         type="button"
         aria-label="Toggle sidenav"
@@ -20,8 +26,10 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>ross-smart-trading-mobile</span>
+      <!-- <span>ross-smart-trading-mobile</span> -->
     </mat-toolbar>
     <!-- Add Content Here -->
+    <router-outlet></router-outlet>
+    <app-boton-redes-sociales class="button-redes"></app-boton-redes-sociales>
   </mat-sidenav-content>
 </mat-sidenav-container>

@@ -1,0 +1,51 @@
+<div class="row">
+  <div class="col-md-4">
+    <div class="container">
+      <form class="form-registrarse p-5 mt-5">
+
+        <mat-form-field class="form-registrarse-full-width" appearance="outline">
+          <mat-label>Nombre</mat-label>
+          <input type="text" matInput [formControl]="nombreFormControl">
+          <mat-error *ngIf="!nombreFormControl.hasError('required')">
+            Ingrese Nombre
+          </mat-error>
+          <mat-error *ngIf="nombreFormControl.hasError('required')">
+            El Nombre es <strong>requerido</strong>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="form-registrarse-full-width" appearance="outline">
+          <mat-label>Email</mat-label>
+          <input type="email" matInput [formControl]="emailFormControl">
+          <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+            Ingrese Email correcto
+          </mat-error>
+          <mat-error *ngIf="emailFormControl.hasError('required')">
+            Email es <strong>requerido</strong>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="form-registrarse-full-width" appearance="outline">
+          <mat-label>Contraseña</mat-label>
+          <input type="password" matInput [formControl]="passFormControl">
+          <mat-error *ngIf="!passFormControl.hasError('required')">
+            Ingrese Contraseña
+          </mat-error>
+          <mat-error *ngIf="passFormControl.hasError('required')">
+            La Contraseña es <strong>requerida</strong> (Mayor a 6 caracteres)
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="form-registrarse-full-width mb-4" appearance="outline">
+          <mat-label>Telefono</mat-label>
+          <input type="email" matInput [(ngModel)]="this.telefono" [ngModelOptions]="{standalone: true}">
+        </mat-form-field>
+        <button mat-button class="button mb-3" (click)="this.masterService.goTo('/login')">Volver a Login</button>
+        <button mat-raised-button class="button" color="primary" (click)="registrarse()">Registrarse</button>
+      </form>
+    </div>
+  </div>
+  <div class="col-md-8 contenedor-dos">
+
+  </div>
+</div>

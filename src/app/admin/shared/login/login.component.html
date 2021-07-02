@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-md-4">
+    <div class="container">
+      <form class="form-login p-5 mt-5">
+        <mat-form-field class="form-login-full-width" appearance="outline">
+          <mat-label>Email</mat-label>
+          <input type="email" matInput [formControl]="emailFormControl">
+          <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+            Ingrese Email correcto
+          </mat-error>
+          <mat-error *ngIf="emailFormControl.hasError('required')">
+            Email es <strong>requerido</strong>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="form-login-full-width mb-4" appearance="outline">
+          <mat-label>Contraseña</mat-label>
+          <input type="password" matInput [formControl]="passFormControl">
+          <mat-error *ngIf="!passFormControl.hasError('required')">
+            Ingrese Contraseña
+          </mat-error>
+          <mat-error *ngIf="passFormControl.hasError('required')">
+            La Contraseña es <strong>requerida</strong> (Mayor a 6 caracteres)
+          </mat-error>
+        </mat-form-field>
+
+        <button mat-button class="button mb-3" (click)="this.masterService.goTo('registrarse')">Registrarse</button>
+        <button mat-raised-button class="button" color="primary" (click)="login()">Entrar</button>
+      </form>
+    </div>
+  </div>
+  <div class="col-md-8 contenedor-dos">
+
+  </div>
+</div>

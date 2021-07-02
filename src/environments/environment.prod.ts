@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  api_URL: 'http://127.0.0.1:8000/api/',
+  telefono: '832782387923'
 };

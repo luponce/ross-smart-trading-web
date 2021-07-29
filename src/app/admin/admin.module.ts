@@ -11,13 +11,25 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegistrarseComponent } from './shared/registrarse/registrarse.component';
 import { MainNavComponent } from './template/main-nav/main-nav.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './pages/home/home.component';
+import { CarteraComponent } from './pages/cartera/cartera.component';
+import { AlertasComponent } from './pages/alertas/alertas.component';
+import { EscuelaComponent } from './pages/escuela/escuela.component';
+import { ConfiguracionComponent } from './pages/configuracion/configuracion.component';
+import { ButtonComponent } from './components/button/button.component';
 
 @NgModule({
   declarations: [
     MainNavComponent,
     LoginComponent,
     BotonRedesSocialesComponent,
-    RegistrarseComponent
+    RegistrarseComponent,
+    HomeComponent,
+    CarteraComponent,
+    AlertasComponent,
+    EscuelaComponent,
+    ConfiguracionComponent,
+    ButtonComponent
   ],
   imports: [
     CommonModule,

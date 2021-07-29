@@ -1,9 +1,81 @@
-<div class="row">
+<div class="fondo">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <form class="form-login p-5 text-center">
+          <img src="assets/RST 1.png" class="mb-5 mt-4" alt="" srcset="">
+          
+          <mat-form-field class="form-registrarse-full-width" appearance="fill">
+            <mat-label>Email</mat-label>
+            <input type="email" matInput [formControl]="emailFormControl">
+            <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+              Ingrese Email correcto
+            </mat-error>
+            <mat-error *ngIf="emailFormControl.hasError('required')">
+              Email es <strong>requerido</strong>
+            </mat-error>
+          </mat-form-field>
+          
+          <mat-form-field class="form-registrarse-full-width" appearance="fill">
+            <mat-label>Contraseña</mat-label>
+            <input type="password" matInput [formControl]="passFormControl">
+            <mat-error *ngIf="!passFormControl.hasError('required')">
+              Ingrese Contraseña
+            </mat-error>
+            <mat-error *ngIf="passFormControl.hasError('required')">
+              La Contraseña es <strong>requerida</strong> (Mayor a 6 caracteres)
+            </mat-error>
+          </mat-form-field>
+
+
+          <mat-form-field class="form-registrarse-full-width" appearance="fill">
+            <mat-label>Nombre</mat-label>
+            <input type="text" matInput [formControl]="nombreFormControl">
+            <mat-error *ngIf="!nombreFormControl.hasError('required')">
+              Ingrese Nombre
+            </mat-error>
+            <mat-error *ngIf="nombreFormControl.hasError('required')">
+              El Nombre es <strong>requerido</strong>
+            </mat-error>
+          </mat-form-field>
+  
+          <mat-form-field class="form-registrarse-full-width mb-4" appearance="fill">
+            <mat-label>Telefono</mat-label>
+            <input type="email" matInput [(ngModel)]="this.telefono" [ngModelOptions]="{standalone: true}">
+          </mat-form-field>
+
+          <div class="row justify-content-center">
+            <div class="col-12">
+              <h3>¿TENÉS EXPERIENIA INVIRTIENDO?</h3>
+            </div>
+            <div class="col-4 mb-4">
+              <mat-checkbox class="example-margin">SI</mat-checkbox>
+            </div>
+            <div class="col-4 mb-4">
+              <mat-checkbox class="example-margin">NO</mat-checkbox>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+              <button mat-stroked-button class="button mb-3" (click)="this.masterService.goTo('/login')">Volver a Login</button>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+              <button mat-stroked-button class="button" color="primary" (click)="registrarse()">Registrarse</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- <div class="row">
   <div class="col-md-4">
     <div class="container">
       <form class="form-registrarse p-5 mt-5">
 
-        <mat-form-field class="form-registrarse-full-width" appearance="outline">
+        <mat-form-field class="form-registrarse-full-width" appearance="fill">
           <mat-label>Nombre</mat-label>
           <input type="text" matInput [formControl]="nombreFormControl">
           <mat-error *ngIf="!nombreFormControl.hasError('required')">
@@ -14,7 +86,7 @@
           </mat-error>
         </mat-form-field>
 
-        <mat-form-field class="form-registrarse-full-width" appearance="outline">
+        <mat-form-field class="form-registrarse-full-width" appearance="fill">
           <mat-label>Email</mat-label>
           <input type="email" matInput [formControl]="emailFormControl">
           <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
@@ -25,7 +97,7 @@
           </mat-error>
         </mat-form-field>
 
-        <mat-form-field class="form-registrarse-full-width" appearance="outline">
+        <mat-form-field class="form-registrarse-full-width" appearance="fill">
           <mat-label>Contraseña</mat-label>
           <input type="password" matInput [formControl]="passFormControl">
           <mat-error *ngIf="!passFormControl.hasError('required')">
@@ -36,7 +108,7 @@
           </mat-error>
         </mat-form-field>
 
-        <mat-form-field class="form-registrarse-full-width mb-4" appearance="outline">
+        <mat-form-field class="form-registrarse-full-width mb-4" appearance="fill">
           <mat-label>Telefono</mat-label>
           <input type="email" matInput [(ngModel)]="this.telefono" [ngModelOptions]="{standalone: true}">
         </mat-form-field>
@@ -48,4 +120,4 @@
   <div class="col-md-8 contenedor-dos">
 
   </div>
-</div>
+</div> -->

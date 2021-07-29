@@ -1,83 +1,24 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Menu</mat-toolbar>
-    <mat-nav-list>
-      <!-- MENU ADMIN -->
-      <div>
-        <mat-expansion-panel>
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Alertas
-            </mat-panel-title>
-          </mat-expansion-panel-header>
-          <p>SUBMENU</p>
-        </mat-expansion-panel>
-
-        <mat-expansion-panel>
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Carteras
-            </mat-panel-title>
-          </mat-expansion-panel-header>
-          <p>SUBMENU</p>
-        </mat-expansion-panel>
-
-        <mat-expansion-panel>
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Notificaciones
-            </mat-panel-title>
-          </mat-expansion-panel-header>
-          <p>SUBMENU</p>
-        </mat-expansion-panel>
-
-        <mat-expansion-panel>
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Planes
-            </mat-panel-title>
-          </mat-expansion-panel-header>
-          <p>SUBMENU</p>
-        </mat-expansion-panel>
-
-        <mat-expansion-panel>
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Servicios
-            </mat-panel-title>
-          </mat-expansion-panel-header>
-          <p>SUBMENU</p>
-        </mat-expansion-panel>
-
-        <mat-expansion-panel>
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Usuarios
-            </mat-panel-title>
-          </mat-expansion-panel-header>
-          <p>SUBMENU</p>
-        </mat-expansion-panel>
-
-        <!-- <a mat-list-item>Alertas</a>
-        <a mat-list-item>Carteras</a>
-        <a mat-list-item>Notificaciones</a>
-        <a mat-list-item>Planes</a>
-        <a mat-list-item>Servicios</a>
-        <a mat-list-item>Usuarios</a> -->
-      </div>
-    </mat-nav-list>
-  </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar>
-      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-      <!-- <span>ross-smart-trading-mobile</span> -->
+    <mat-toolbar class="toolbar">
+      <mat-toolbar-row>
+        <span>
+          <img src="../../../../assets/ROSS-ON-SM 1.png" alt="" srcset="">
+        </span>
+        <span class="spacer text-center">
+          <button mat-button routerLink="/admin/home">HOME</button>
+          <button mat-button routerLink="/admin/cartera">CARTERA</button>
+          <button mat-button routerLink="/admin/alertas">ALERTAS</button>
+          <button mat-button routerLink="/admin/escuela">ESCUELA</button>
+        </span>
+        <button mat-button routerLink="/admin/configuracion">CONFIGURACIÓN</button>
+      </mat-toolbar-row>
     </mat-toolbar>
-    <!-- Add Content Here -->
-    <router-outlet></router-outlet>
+
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
+
     <app-boton-redes-sociales class="button-redes"></app-boton-redes-sociales>
   </mat-sidenav-content>
 </mat-sidenav-container>

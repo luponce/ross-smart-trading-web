@@ -32,9 +32,10 @@ export class LoginComponent implements OnInit {
       email: this.emailFormControl.value,
       password: this.passFormControl.value
     };
-    this.loginService.login(login).subscribe(data => {
-      this.masterService.escribirConsola('INGRESO USUARIO: ', data);
-      this.masterService.goTo('admin');
-    });
+    this.masterService.goTo('/admin/home');
+    // this.loginService.login(login).subscribe(data => {
+    //   this.masterService.escribirConsola('INGRESO USUARIO: ', data);
+    //   this.masterService.goTo('admin');
+    // });
   }
 }

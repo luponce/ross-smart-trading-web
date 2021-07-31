@@ -38,3 +38,20 @@
 .mat-drawer-content {
   background-color: white !important;
 }
+
+p {
+  font-size: 12px;
+  margin: 0 !important;
+}
+
+.menu {
+  cursor: pointer;
+}
+
+.no-seleccionado {
+  color: black;
+}
+
+.seleccionado {
+  color: #519ED4;
+}

@@ -17,6 +17,8 @@ import { AlertasComponent } from './pages/alertas/alertas.component';
 import { EscuelaComponent } from './pages/escuela/escuela.component';
 import { ConfiguracionComponent } from './pages/configuracion/configuracion.component';
 import { ButtonComponent } from './components/button/button.component';
+import { SATComponent } from './pages/sat/sat.component';
+import { LATComponent } from './pages/lat/lat.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { ButtonComponent } from './components/button/button.component';
     AlertasComponent,
     EscuelaComponent,
     ConfiguracionComponent,
-    ButtonComponent
+    ButtonComponent,
+    SATComponent,
+    LATComponent
   ],
   imports: [
     CommonModule,

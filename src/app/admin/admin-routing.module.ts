@@ -9,6 +9,8 @@ import { CarteraComponent } from './pages/cartera/cartera.component';
 import { AlertasComponent } from './pages/alertas/alertas.component';
 import { EscuelaComponent } from './pages/escuela/escuela.component';
 import { ConfiguracionComponent } from './pages/configuracion/configuracion.component';
+import { SATComponent } from './pages/sat/sat.component';
+import { LATComponent } from './pages/lat/lat.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -19,7 +21,9 @@ const routes: Routes = [
     { path: 'cartera', component: CarteraComponent },
     { path: 'alertas', component: AlertasComponent },
     { path: 'escuela', component: EscuelaComponent },
-    { path: 'configuracion', component: ConfiguracionComponent }
+    { path: 'configuracion', component: ConfiguracionComponent },
+    { path: 'sat', component: SATComponent },
+    { path: 'lat', component: LATComponent },
   ] },
 ];
 

@@ -1,0 +1,47 @@
+.header {
+    width: 100%;
+    margin: 0 !important;
+}
+
+.texto-chico {
+    font-size: 9px;
+}
+
+.titulo {
+    color: #3A3A3A;
+    font-size: 18px !important;
+    font-weight: 700;
+}
+
+.descripcion {
+    font-size: 12px !important;
+}
+
+.card-alerta {
+    border: 1px solid #E2E2E2;
+    background-color: white !important;
+}
+
+.border-azul {
+    border-left: 20px solid #39749D;
+}
+
+.border-negro {
+    border-left: 20px solid #1B2A41;
+}
+
+.border-amarillo {
+    border-left: 20px solid #F3BA2F;
+}
+
+.border-verde-claro {
+    border-left: 20px solid #67AAAB;
+}
+
+.border-verde-oscuro {
+    border-left: 20px solid #518A8B;
+}
+
+.button-alerta {
+    background-color: #3FD38C !important;
+}

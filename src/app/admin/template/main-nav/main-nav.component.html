@@ -3,15 +3,46 @@
     <mat-toolbar class="toolbar">
       <mat-toolbar-row>
         <span>
-          <img src="../../../../assets/ROSS-ON-SM 1.png" alt="" srcset="">
+          <img src="assets/ROSS-ON-SM 1.png" alt="" srcset="">
         </span>
+
+
+
         <span class="spacer text-center">
-          <button mat-button routerLink="/admin/home">HOME</button>
+
+          <div class="row justify-content-center">
+            <div class="col-xs-1 col-sm-1 col-md-2 col-lg-2 menu" (click)="this.menu = 1" routerLink="/admin/home">
+              <img *ngIf="this.menu === 1" src="assets/icons-menu/home-azul.png" style="width: 25px;" alt="">
+              <img *ngIf="this.menu !== 1" src="assets/icons-menu/home-azul.png" style="width: 25px;" alt="">
+              <p class="no-seleccionado" [ngClass]="{'seleccionado': this.menu === 1}">HOME</p>
+            </div>
+            <div class="col-xs-1 col-sm-1 col-md-2 col-lg-2 menu" (click)="this.menu = 2" routerLink="/admin/cartera">
+              <img *ngIf="this.menu === 2" src="assets/icons-menu/cartera-azul.png" style="width: 25px;" alt="">
+              <img *ngIf="this.menu !== 2" src="assets/icons-menu/cartera-gris.png" style="width: 25px;" alt="">
+              <p class="no-seleccionado" [ngClass]="{'seleccionado': this.menu === 2}">CARTERA</p>
+            </div>
+            <div class="col-xs-1 col-sm-1 col-md-2 col-lg-2 menu" (click)="this.menu = 3" routerLink="/admin/alertas">
+              <img *ngIf="this.menu === 3" src="assets/icons-menu/notify-azul.png" style="width: 25px;" alt="">
+              <img *ngIf="this.menu !== 3" src="assets/icons-menu/notify-gris.png" style="width: 25px;" alt="">
+              <p class="no-seleccionado" [ngClass]="{'seleccionado': this.menu === 3}">ALERTAS</p>
+            </div>
+            <div class="col-xs-1 col-sm-1 col-md-2 col-lg-2 menu" (click)="this.menu = 4" routerLink="/admin/escuela">
+              <img *ngIf="this.menu === 4" src="assets/icons-menu/escuela-azul.png" style="width: 25px;" alt="">
+              <img *ngIf="this.menu !== 4" src="assets/icons-menu/escuela-gris.png" style="width: 25px;" alt="">
+              <p class="no-seleccionado" [ngClass]="{'seleccionado': this.menu === 4}">ESCUELA</p>
+            </div>
+          </div>
+
+          <!-- <button mat-button routerLink="/admin/home">HOME</button>
           <button mat-button routerLink="/admin/cartera">CARTERA</button>
           <button mat-button routerLink="/admin/alertas">ALERTAS</button>
-          <button mat-button routerLink="/admin/escuela">ESCUELA</button>
+          <button mat-button routerLink="/admin/escuela">ESCUELA</button> -->
         </span>
-        <button mat-button routerLink="/admin/configuracion">CONFIGURACIÓN</button>
+        <div class="text-center menu" (click)="this.menu = 5" routerLink="/admin/configuracion">
+          <img src="assets/icons-menu/settings-gris.png" style="width: 25px;" alt="">
+          <p class="no-seleccionado" [ngClass]="{'seleccionado': this.menu === 5}">CONFIGURACIÓN</p>
+        </div>
+        <!-- <button mat-button routerLink="/admin/configuracion">CONFIGURACIÓN</button> -->
       </mat-toolbar-row>
     </mat-toolbar>
 

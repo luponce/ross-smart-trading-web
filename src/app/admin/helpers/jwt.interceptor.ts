@@ -6,6 +6,7 @@ import {
   HttpInterceptor
 } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { User } from '../models/login.model';
 
 @Injectable()
 export class JwtInterceptor implements HttpInterceptor {
@@ -13,11 +14,11 @@ export class JwtInterceptor implements HttpInterceptor {
   constructor() {}
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
-    const usuario: any = JSON.parse(localStorage.getItem('user'));
-    if (usuario !== null) {
+    let currentUser: User = JSON.parse(localStorage.getItem('user')!);
+    if (currentUser?.token !== null) {
       request = request.clone({
         setHeaders: {
-          Authorization: `Bearer ${usuario.data.token}`
+          Authorization: `Bearer ${currentUser.token }`
         }
       });
     }

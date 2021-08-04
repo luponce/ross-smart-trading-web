@@ -1,0 +1,50 @@
+.titulo {
+    background-color: #1B2A41;
+    color: white;
+    text-align: center;
+    line-height: 18px;
+    font-weight: 700;
+    padding: 8px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.fecha {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 13px;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 0px;
+}
+
+.gris {
+    background-color: #C4C4C4;
+    border-radius: 50%;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #C4C4C4;
+}
+
+.verde {
+    background-color: #2B9041;
+    border-radius: 50%;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #2B9041;
+}
+
+.rojo {
+    background-color: #A80000;
+    border-radius: 50%;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #A80000;
+}
+
+.font-14 {
+    font-size: 14px !important;
+}
+
+

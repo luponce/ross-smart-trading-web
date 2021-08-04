@@ -5,15 +5,11 @@
         <span>
           <img src="assets/ROSS-ON-SM 1.png" alt="" srcset="">
         </span>
-
-
-
         <span class="spacer text-center">
-
           <div class="row justify-content-center">
             <div class="col-xs-1 col-sm-1 col-md-2 col-lg-2 menu" (click)="this.menu = 1" routerLink="/admin/home">
               <img *ngIf="this.menu === 1" src="assets/icons-menu/home-azul.png" style="width: 25px;" alt="">
-              <img *ngIf="this.menu !== 1" src="assets/icons-menu/home-azul.png" style="width: 25px;" alt="">
+              <img *ngIf="this.menu !== 1" src="assets/icons-menu/home-gris.png" style="width: 25px;" alt="">
               <p class="no-seleccionado" [ngClass]="{'seleccionado': this.menu === 1}">HOME</p>
             </div>
             <div class="col-xs-1 col-sm-1 col-md-2 col-lg-2 menu" (click)="this.menu = 2" routerLink="/admin/cartera">
@@ -32,17 +28,12 @@
               <p class="no-seleccionado" [ngClass]="{'seleccionado': this.menu === 4}">ESCUELA</p>
             </div>
           </div>
-
-          <!-- <button mat-button routerLink="/admin/home">HOME</button>
-          <button mat-button routerLink="/admin/cartera">CARTERA</button>
-          <button mat-button routerLink="/admin/alertas">ALERTAS</button>
-          <button mat-button routerLink="/admin/escuela">ESCUELA</button> -->
         </span>
         <div class="text-center menu" (click)="this.menu = 5" routerLink="/admin/configuracion">
-          <img src="assets/icons-menu/settings-gris.png" style="width: 25px;" alt="">
+          <img *ngIf="this.menu === 5" src="assets/icons-menu/settings-azul.png" style="width: 25px;" alt="">
+          <img *ngIf="this.menu !== 5" src="assets/icons-menu/settings-gris.png" style="width: 25px;" alt="">
           <p class="no-seleccionado" [ngClass]="{'seleccionado': this.menu === 5}">CONFIGURACIÓN</p>
         </div>
-        <!-- <button mat-button routerLink="/admin/configuracion">CONFIGURACIÓN</button> -->
       </mat-toolbar-row>
     </mat-toolbar>
 

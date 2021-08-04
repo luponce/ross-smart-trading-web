@@ -43,7 +43,10 @@ export class RegistrarseComponent implements OnInit {
     };
     this.registrarseService.registrarse(usuario).subscribe((data) => {
       this.masterService.escribirConsola('USUARIO REGISTRADO: ', data);
-      this.masterService.goTo('admin');
+      this.masterService.goTo('/admin/home');
+    }, err => {
+      this.masterService.snackBarPresent('Error al Registrarse. Contactese con el Administrador.');
+      console.error('ERROR REGISTRARSE', err);
     });
   }
 }

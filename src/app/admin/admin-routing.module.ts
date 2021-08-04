@@ -15,16 +15,36 @@ import { LATComponent } from './pages/lat/lat.component';
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'registrarse', component: RegistrarseComponent },
-  // { path: 'admin', component: MainNavComponent, canActivate: [AuthGuard] },
-  { path: 'admin', component: MainNavComponent, children: [
-    { path: 'home', component: HomeComponent },
-    { path: 'cartera', component: CarteraComponent },
-    { path: 'alertas', component: AlertasComponent },
-    { path: 'escuela', component: EscuelaComponent },
-    { path: 'configuracion', component: ConfiguracionComponent },
-    { path: 'sat', component: SATComponent },
-    { path: 'lat', component: LATComponent },
-  ] },
+  {
+    path: 'admin',
+    component: MainNavComponent,
+    canActivate: [AuthGuard],
+    children: [
+      { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
+      {
+        path: 'cartera',
+        component: CarteraComponent,
+        canActivate: [AuthGuard],
+      },
+      {
+        path: 'alertas',
+        component: AlertasComponent,
+        canActivate: [AuthGuard],
+      },
+      {
+        path: 'escuela',
+        component: EscuelaComponent,
+        canActivate: [AuthGuard],
+      },
+      {
+        path: 'configuracion',
+        component: ConfiguracionComponent,
+        canActivate: [AuthGuard],
+      },
+      { path: 'sat', component: SATComponent, canActivate: [AuthGuard] },
+      { path: 'lat', component: LATComponent, canActivate: [AuthGuard] },
+    ],
+  },
 ];
 
 @NgModule({

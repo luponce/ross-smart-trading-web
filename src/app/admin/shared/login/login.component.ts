@@ -32,10 +32,12 @@ export class LoginComponent implements OnInit {
       email: this.emailFormControl.value,
       password: this.passFormControl.value
     };
-    this.masterService.goTo('/admin/home');
-    // this.loginService.login(login).subscribe(data => {
-    //   this.masterService.escribirConsola('INGRESO USUARIO: ', data);
-    //   this.masterService.goTo('admin');
-    // });
+    this.loginService.login(login).subscribe(data => {
+      this.masterService.escribirConsola('INGRESO USUARIO: ', data);
+      this.masterService.goTo('/admin/home');
+    }, err => {
+      this.masterService.snackBarPresent('Credenciales incorrectas. Ingrese Usuario y Contraseña validos.');
+      console.error('ERROR LOGIN', err);
+    });
   }
 }

@@ -11,6 +11,8 @@ import { EscuelaComponent } from './pages/escuela/escuela.component';
 import { ConfiguracionComponent } from './pages/configuracion/configuracion.component';
 import { SATComponent } from './pages/sat/sat.component';
 import { LATComponent } from './pages/lat/lat.component';
+import { DetalleAlertaComponent } from './pages/detalle-alerta/detalle-alerta.component';
+import { DetalleCarteraComponent } from './pages/detalle-cartera/detalle-cartera.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -43,6 +45,16 @@ const routes: Routes = [
       },
       { path: 'sat', component: SATComponent, canActivate: [AuthGuard] },
       { path: 'lat', component: LATComponent, canActivate: [AuthGuard] },
+      {
+        path: 'detalle-alerta/:id',
+        component: DetalleAlertaComponent,
+        canActivate: [AuthGuard],
+      },
+      {
+        path: 'detalle-cartera/:id',
+        component: DetalleCarteraComponent,
+        canActivate: [AuthGuard],
+      },
     ],
   },
 ];

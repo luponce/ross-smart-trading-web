@@ -1,0 +1,38 @@
+.titulo {
+    background-color: #39749D;
+    color: white;
+    text-align: center;
+    line-height: 18px;
+    font-weight: 700;
+    padding: 8px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+
+.gris {
+    background-color: #C4C4C4;
+    border-radius: 50%;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #C4C4C4;
+    margin-left: 10px;
+}
+
+.verde {
+    background-color: #2B9041;
+    border-radius: 50%;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #2B9041;
+    margin-left: 10px;
+}
+
+.rojo {
+    background-color: #A80000;
+    border-radius: 50%;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #A80000;
+    margin-left: 10px;
+}

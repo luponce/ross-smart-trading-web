@@ -19,6 +19,8 @@ import { ConfiguracionComponent } from './pages/configuracion/configuracion.comp
 import { ButtonComponent } from './components/button/button.component';
 import { SATComponent } from './pages/sat/sat.component';
 import { LATComponent } from './pages/lat/lat.component';
+import { DetalleCarteraComponent } from './pages/detalle-cartera/detalle-cartera.component';
+import { DetalleAlertaComponent } from './pages/detalle-alerta/detalle-alerta.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { LATComponent } from './pages/lat/lat.component';
     ConfiguracionComponent,
     ButtonComponent,
     SATComponent,
-    LATComponent
+    LATComponent,
+    DetalleCarteraComponent,
+    DetalleAlertaComponent
   ],
   imports: [
     CommonModule,

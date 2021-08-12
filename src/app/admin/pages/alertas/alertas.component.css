@@ -1,48 +1,79 @@
 .header {
-    width: 100%;
-    margin: 0 !important;
+  width: 100%;
+  margin: 0 !important;
 }
 
 .texto-chico {
-    font-size: 9px;
+  font-size: 12px;
 }
 
 .titulo {
-    color: #3A3A3A;
-    font-size: 18px !important;
-    font-weight: 700;
+  color: #3A3A3A;
+  font-size: 18px !important;
+  font-weight: 700;
 }
 
 .descripcion {
-    font-size: 12px !important;
+  font-size: 12px !important;
 }
 
 .card-alerta {
-    border: 1px solid #E2E2E2;
-    background-color: white !important;
-    cursor: pointer;
+  border: 1px solid #E2E2E2;
+  background-color: white !important;
+  cursor: pointer;
 }
 
 .border-azul {
-    border-left: 20px solid #39749D;
+  border-left: 20px solid #39749D;
 }
 
 .border-negro {
-    border-left: 20px solid #1B2A41;
+  border-left: 20px solid #1B2A41;
 }
 
 .border-amarillo {
-    border-left: 20px solid #F3BA2F;
+  border-left: 20px solid #F3BA2F;
 }
 
 .border-verde-claro {
-    border-left: 20px solid #67AAAB;
+  border-left: 20px solid #67AAAB;
 }
 
 .border-verde-oscuro {
-    border-left: 20px solid #518A8B;
+  border-left: 20px solid #518A8B;
 }
 
 .button-alerta {
-    background-color: #3FD38C !important;
+  background-color: #3FD38C !important;
+}
+
+.titulo-alerta {
+  background-color: #1B2A41;
+  color: white;
+  text-align: center;
+  line-height: 18px;
+  font-weight: 700;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.border-rojo {
+  border-bottom: 3px solid #A80000;
+}
+
+.border-verde {
+  border-bottom: 3px solid #3FD38C;
+}
+
+.ver-detalle {
+  border-bottom: 1px solid;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 7px;
+  color: #3A3A3A;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
 }
